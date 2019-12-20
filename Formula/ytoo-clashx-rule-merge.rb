@@ -11,7 +11,7 @@ class YtooClashxRuleMerge < Formula
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel 
-    cnf = #{HOME}/.ytoo-clashx-rule-merge/conf.yaml
+    cnf = ENV['HOME']/.ytoo-clashx-rule-merge/conf.yaml
     if cnf.exist?
         system "echo 'Rule:' > #{cnf}"
     else
@@ -36,7 +36,7 @@ class YtooClashxRuleMerge < Formula
             <string>--port</string>
             <string>9999</string>
             <string>--file</string>
-            <string>#{HOME}/.ytoo-clashx-rule-merge/conf.yaml</string>
+            <string>#{ENV['HOME']}/.ytoo-clashx-rule-merge/conf.yaml</string>
         </array>
         <key>RunAtLoad</key>
         <true/>
