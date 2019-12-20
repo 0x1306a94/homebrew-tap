@@ -4,19 +4,21 @@
 class YtooClashxRuleMerge < Formula
   desc "calsx 规则合并"
   homepage "https://github.com/0x1306a94/homebrew-apps"
-  url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/ytoo-clashx-rule-merge"
-  sha256 "875881034ffc4c8c6a5894a64a724cee718b1e45229909344893744560c29ed0"
+  url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/ytoo-clashx-rule-merge.zip"
+  sha256 "362057e463d03c44818e8c7b271f26ed11b9d5b417434df3df24c261389c57ad"
 
   # depends_on "cmake" => :build
 
+  def datadir
+    prefix/"clashx-rule-merge"
+  end
+
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel 
-    # cnf = "#{ENV['HOME']}/.ytoo-clashx-rule-merge/conf.yaml"
-    # if cnf.exist?
-    #     system "echo 'Rule:' > #{cnf}"
-    # else
-    #     puts "Then #{cnf} file does not exist"
-    # end
+    bin.install "ytoo-clashx-rule-merge"
+    system "mkdir", "-p", "#{datadir}"
+    (datadir/"conf.yaml").write <<~EOS
+      Rule:
+    EOS
   end
 
   plist_options :manual => "ytoo-clashx-rule-merge"
@@ -26,20 +28,20 @@ class YtooClashxRuleMerge < Formula
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
     <dict>
-        <key>KeepAlive</key>
-        <true/>
-        <key>Label</key>
-        <string>#{plist_name}/string>
-        <key>ProgramArguments</key>
-        <array>
-            <string>#{opt_bin}/ytoo-clashx-rule-merge</string>
-            <string>--port</string>
-            <string>9999</string>
-            <string>--file</string>
-            <string>#{ENV['HOME']}/.ytoo-clashx-rule-merge/conf.yaml</string>
-        </array>
-        <key>RunAtLoad</key>
-        <true/>
+      <key>KeepAlive</key>
+      <true/>
+      <key>Label</key>
+      <string>#{plist_name}</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>#{opt_bin}/ytoo-clashx-rule-merge</string>
+        <string>--port</string>
+        <string>9999</string>
+        <string>--file</string>
+        <string>#{datadir}/conf.yaml</string>
+      </array>
+      <key>RunAtLoad</key>
+      <true/>
     </dict>
     </plist>
   EOS
