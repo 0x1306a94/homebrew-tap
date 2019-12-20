@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class ytooclashxrulemerge < Formula
+class YtooClashxRuleMerge < Formula
   desc "calsx 规则合并"
   homepage "https://github.com/0x1306a94/homebrew-apps"
   url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/ytoo-clashx-rule-merge"
