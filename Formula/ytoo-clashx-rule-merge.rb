@@ -15,9 +15,35 @@ class YtooClashxRuleMerge < Formula
 
   def install
     bin.install "ytoo-clashx-rule-merge"
-    system "mkdir", "-p", "#{datadir}"
+    (datadir).mkpath
     (datadir/"conf.yaml").write <<~EOS
       Rule:
+    EOS
+
+    puts <<~EOS
+
+      \033[32mHow to use?\033[0m
+
+      \033[36mManual operation:\033[0m
+      \033[33mytoo-clashx-rule-merge --port 8080 -- file xxx.yaml\033[0m
+
+      \033[36mDaemon running:\033[0m
+      \033[33mbrew services start ytoo-clashx-rule-merge\033[0m # start
+      \033[33mbrew services stop ytoo-clashx-rule-merge\033[0m # stop
+
+      \033[32mHow to configure rules?\033[0m
+      \033[33m1.First open the #{datadir}/conf.yaml file.\033[0m
+      \033[33m2.And then append the rule. The rule USES YAML syntax.\033[0m
+      \033[33m3.A rule contains (match mode, match, route).\033[0m
+      \033[35mThe sample:\033[0m
+        Rule:
+        - DOMAIN,www.google.com,PROXY
+        - DOMAIN-SUFFIX,qq.com,DIRECT
+        - DOMAIN-SUFFIX,apple.com,PROXY
+        - IP-CIDR,10.20.120.0/24,DIRECT 
+        - GEOIP,CN,DIRECT
+        - MATCH,Final
+      
     EOS
   end
 
