@@ -1,11 +1,11 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class YtooClashxRuleMerge < Formula
+class ClashxRuleMerge < Formula
   desc "calsx 规则合并"
   homepage "https://github.com/0x1306a94/homebrew-apps"
-  url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/ytoo-clashx-rule-merge.zip"
-  sha256 "362057e463d03c44818e8c7b271f26ed11b9d5b417434df3df24c261389c57ad"
+  url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/clashx-rule-merge.zip"
+  sha256 "7e2ba25b0dfcff851162bbc7fb31b1527e95d554c2862a1154e79e02d4a02a20"
 
   # depends_on "cmake" => :build
 
@@ -14,7 +14,7 @@ class YtooClashxRuleMerge < Formula
   end
 
   def install
-    bin.install "ytoo-clashx-rule-merge"
+    bin.install "clashx-rule-merge"
     (datadir).mkpath
     (datadir/"conf.yaml").write <<~EOS
       Rule:
@@ -60,7 +60,7 @@ class YtooClashxRuleMerge < Formula
       <string>#{plist_name}</string>
       <key>ProgramArguments</key>
       <array>
-        <string>#{opt_bin}/ytoo-clashx-rule-merge</string>
+        <string>#{opt_bin}/clashx-rule-merge</string>
         <string>--port</string>
         <string>9999</string>
         <string>--file</string>
