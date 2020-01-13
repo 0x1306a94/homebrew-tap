@@ -41,13 +41,11 @@ class ClashxRuleMerge < Formula
         - DOMAIN-SUFFIX,qq.com,DIRECT
         - DOMAIN-SUFFIX,apple.com,PROXY
         - IP-CIDR,10.20.120.0/24,DIRECT 
-        - GEOIP,CN,DIRECT
-        - MATCH,Final
       
     EOS
   end
 
-  plist_options :manual => "ytoo-clashx-rule-merge"
+  plist_options :manual => "clashx-rule-merge"
 
   def plist; <<~EOS
     <?xml version="1.0" encoding="UTF-8"?>
