@@ -6,6 +6,7 @@ class ClashxRuleMerge < Formula
   homepage "https://github.com/0x1306a94/homebrew-apps"
   url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/clashx-rule-merge.zip"
   sha256 "7e2ba25b0dfcff851162bbc7fb31b1527e95d554c2862a1154e79e02d4a02a20"
+  version "master"
 
   # depends_on "cmake" => :build
 
