@@ -6,7 +6,8 @@ class CocoapodsCacheProxyServer < Formula
     homepage "https://github.com/0x1306a94/homebrew-apps"
     url "https://raw.githubusercontent.com/0x1306a94/homebrew-apps/master/cocoapods-cache-proxy-server.zip"
     sha256 "f4d12523994fae1e781ad1a2df25b9f05c1b31bc32c8cdca783b107a4f6c4f92"
-  
+    version "master"
+    
     # depends_on "cmake" => :build
   
     def datadir
