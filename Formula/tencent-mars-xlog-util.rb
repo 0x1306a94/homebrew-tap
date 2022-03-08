@@ -14,7 +14,7 @@ class TencentMarsXlogUtil < Formula
     bin.install "tencent-mars-xlog-util"
     puts <<~EOS
 
-           \033[32mtencent-mars-xlog-util 0.1.1\033[0m
+           \033[32mtencent-mars-xlog-util #{TencentMarsXlogUtil.version}\033[0m
            0x1306a94 <0x1306a94@gmail.com>
            tencent-mars-xlog-util
 
