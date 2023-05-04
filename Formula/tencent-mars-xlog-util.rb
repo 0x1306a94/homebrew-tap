@@ -2,11 +2,11 @@
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class TencentMarsXlogUtil < Formula
-  version "0.1.3"
+  version "0.1.4"
   desc "腾讯Xlog 日志解码"
   homepage "https://github.com/0x1306a94/tencent-mars-xlog-rust"
   url "https://github.com/0x1306a94/tencent-mars-xlog-rust/releases/download/#{TencentMarsXlogUtil.version}/tencent-mars-xlog-util-macos-universal-v#{TencentMarsXlogUtil.version}-binaries.zip"
-  sha256 "b26f8c02eb9cb509e05a6152a475cc25fcef9dc651402b3d37d92c2485470554"
+  sha256 "622185603bd88628e38ede27df0fd2c5010647462f9e641ca8266755404b7865"
 
   # depends_on "cmake" => :build
 
