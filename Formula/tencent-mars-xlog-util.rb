@@ -6,7 +6,7 @@ class TencentMarsXlogUtil < Formula
   desc "腾讯Xlog 日志解码"
   homepage "https://github.com/0x1306a94/tencent-mars-xlog-rust"
   url "https://github.com/0x1306a94/tencent-mars-xlog-rust/releases/download/#{TencentMarsXlogUtil.version}/tencent-mars-xlog-util-macos-universal-v#{TencentMarsXlogUtil.version}-binaries.zip"
-  sha256 "622185603bd88628e38ede27df0fd2c5010647462f9e641ca8266755404b7865"
+  sha256 "6ee9198fe29962becbd1f56208d9cb2b89147d2ee88f3db7492c5f3596107e27"
 
   # depends_on "cmake" => :build
 
