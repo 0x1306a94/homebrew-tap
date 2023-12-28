@@ -6,7 +6,7 @@ class FileCipherCli < Formula
   desc "支持xor或者AES 256 CBC 加解密文件"
   homepage "https://github.com/0x1306a94/file_cipher"
   url "https://github.com/0x1306a94/file_cipher/releases/download/#{FileCipherCli.version}/file_cipher_cli-macos-universal-v#{FileCipherCli.version}-binaries.zip"
-  sha256 "fa6eb289e73e1b4acd561f77b639fac21ba2a79a2c38c3d9c3cd92b0353c9ba1"
+  sha256 "07235e8c4bd787bd661466e8cb3cb5c0ca32cfbf03f5b7701117220d83c159d1"
 
   def install
     bin.install "file_cipher_cli"
