@@ -2,11 +2,11 @@
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class FileCipherCli < Formula
-  version "1.1.0"
+  version "1.1.1"
   desc "支持xor或者AES 256 CBC 加解密文件"
   homepage "https://github.com/0x1306a94/file_cipher"
   url "https://github.com/0x1306a94/file_cipher/releases/download/#{FileCipherCli.version}/file_cipher_cli-macos-universal-v#{FileCipherCli.version}-binaries.zip"
-  sha256 "07235e8c4bd787bd661466e8cb3cb5c0ca32cfbf03f5b7701117220d83c159d1"
+  sha256 "44d8ec3d003996f6508cdd9df77ebd84111a494e2d1d72ab18544b07c918d7d6"
 
   def install
     bin.install "file_cipher_cli"
