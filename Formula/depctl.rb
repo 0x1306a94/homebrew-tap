@@ -8,7 +8,7 @@ class Depctl < Formula
   url "https://github.com/0x1306a94/depctl/releases/download/v#{Depctl.version}/depctl-mac-universal.zip"
   # TODO: Update sha256 after first release is created
   # Run: shasum -a 256 <downloaded_file.zip>
-  sha256 "28455c7f0d35b9fdc35f3c644993e64983ca658e5b73bea26b826d7cc258fd43"
+  sha256 "47999774e6006a78a5cdbea57def73da0b372f6446120d9f6b4c9ad35efbbafd"
 
   def install
     bin.install "depctl"
